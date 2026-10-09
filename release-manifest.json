@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "app_name": "Edén Rosa Software",
+  "app_id": "com.edenrosa.erp.pos",
+  "latest_version": "2.0.0",
+  "release_date": "2026-10-07",
+  "channel": "stable",
+  "download_url": "https://github.com/CoriosMwRaw/eden-rosa-releases/releases/latest",
+  "installer_name": "EdenRosa-Setup-v2.0.0.exe",
+  "installer_type": "InnoSetup",
+  "target_os": "Windows 10 / 11 (64-bit)",
+  "minimum_system_requirements": {
+    "os": "Windows 10 x64 (1909+)",
+    "ram_mb": 4096,
+    "disk_free_mb": 500
+  },
+  "mandatory_update": false,
+  "changelog": [
+    "Validación obligatoria de turno de caja chica antes de ventas POS.",
+    "Selector reactivo de montos de apertura ($300, $500, $1,000, $1,500 MXN).",
+    "Transición cinematográfica de logout y selector reactivo de montos.",
+    "Favicon inteligente adaptativo para pestañas (modo claro y oscuro).",
+    "Auto-sanación de catálogo canónico y recetas de arreglos florales BOM.",
+    "Seguridad RBAC reforzada con matriz inviolable de 4 roles."
+  ]
+}

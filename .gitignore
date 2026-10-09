@@ -1,0 +1,20 @@
+# Binarios locales grandes (se suben vía GitHub Releases Assets)
+*.exe
+*.msi
+*.zip
+*.tar.gz
+dist/
+build/
+Output/
+
+# Archivos de entorno y sistema
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
