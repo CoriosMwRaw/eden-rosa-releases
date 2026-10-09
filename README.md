@@ -94,8 +94,6 @@ Actualiza el archivo `release-manifest.json` en la rama principal (`main`) para 
 
 - **César Alberto López Martínez** ([@CoriosMwRaw](https://github.com/CoriosMwRaw)) — Líder de Proyecto & Desarrollador Backend
 - **Kevin de Jesús Ramírez López** ([@KeVINj29](https://github.com/KeVINj29)) — Co-Desarrollador, Líder Técnico Frontend & Base de Datos
-- **Cliente Patrocinadora:** Fátima Monserrat Orozco Escamilla (Florería Edén Rosa)
-- **Materia:** Gestión de Proyecto de Software — 7° Semestre
 
 ---
 
