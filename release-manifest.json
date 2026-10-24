@@ -2,11 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "app_name": "Edén Rosa Software",
   "app_id": "com.edenrosa.erp.pos",
-  "latest_version": "2.0.0",
-  "release_date": "2026-10-07",
+  "latest_version": "2.4.1",
+  "release_date": "2026-10-24",
   "channel": "stable",
   "download_url": "https://github.com/CoriosMwRaw/eden-rosa-releases/releases/latest",
-  "installer_name": "EdenRosa-Setup-v2.0.0.exe",
+  "installer_name": "EdenRosa_Setup_v2.4.1.exe",
   "installer_type": "InnoSetup",
   "target_os": "Windows 10 / 11 (64-bit)",
   "minimum_system_requirements": {
@@ -16,11 +16,13 @@
   },
   "mandatory_update": false,
   "changelog": [
-    "Validación obligatoria de turno de caja chica antes de ventas POS.",
-    "Selector reactivo de montos de apertura ($300, $500, $1,000, $1,500 MXN).",
-    "Transición cinematográfica de logout y selector reactivo de montos.",
-    "Favicon inteligente adaptativo para pestañas (modo claro y oscuro).",
-    "Auto-sanación de catálogo canónico y recetas de arreglos florales BOM.",
-    "Seguridad RBAC reforzada con matriz inviolable de 4 roles."
+    "Aislamiento estricto de categorías de catálogo e inventario por sucursal física.",
+    "Preservación y protección blindada de las 5 categorías canónicas base.",
+    "Jerarquía estricta RBAC: los administradores no pueden crear ni manipular superadministradores.",
+    "Corte Z botánico detallado en PDF con consumo de flores, mermas e ingresos por forma de pago.",
+    "Corte X de arqueo parcial a mitad de jornada sin cerrar turno ni alterar saldos.",
+    "Soporte y configuración de mini-printer térmica de tickets para clientes (80mm / 58mm).",
+    "Organización de catálogo e insumos por Mayor Rotación de Ventas.",
+    "Anulación segura de pedidos en taller revirtiendo flores reservadas al stock."
   ]
 }

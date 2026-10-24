@@ -4,6 +4,39 @@ Todas las versiones notables de esta aplicación están documentadas en este arc
 
 ---
 
+## [v2.4.1] — 2026-10-24
+### 🛡️ Aislamiento de Categorías por Sucursal y Jerarquía Estricta en Roles de Usuario
+
+#### ✨ Novedades y Mejoras
+- **Aislamiento de Categorías por Tienda:** Las categorías nuevas del catálogo e inventario ahora están estrictamente asociadas a su `sucursal_id`, impidiendo que categorías de pruebas o exclusivas de una sucursal se filtren al catálogo de otras tiendas físicas.
+- **Protección de Categorías Canónicas Base:** Las 5 categorías canónicas del sistema (Flores principales, Arreglos, Follajes, Materiales y Accesorios) quedan blindadas contra eliminación accidental y disponibles de forma oficial para toda la red de sucursales.
+- **Jerarquía Estricta en Registro de Empleados:** Un `administrador` de sucursal únicamente puede registrar o modificar roles de su nivel hacia abajo (`administrador`, `cajero`, `florista`, `repartidor`). Queda bloqueada a nivel visual en frontend y con código `403 Forbidden` en backend la asignación o manipulación de usuarios `superadmin`.
+- **Preservación Total de Datos Productivos:** Migraciones no destructivas (`ALTER TABLE ADD COLUMN IF NOT EXISTS`) que garantizan la integridad de existencias, órdenes y ventas del cliente.
+
+---
+
+## [v2.4.0] — 2026-10-23
+### 🧾 Corte Z Botánico Detallado, Mini-Printer Térmica, Candado de Turno Vencido y Corte X
+
+#### ✨ Novedades y Características
+- **Corte Z Ultra-Detallado en PDF:** Generación oficial de acta de cierre con desglose de ingresos por método de pago (efectivo, tarjetas, transferencias), bitácora de salidas y gastos menores, y resumen del consumo botánico de flores e insumos despachados durante el turno.
+- **Soporte de Impresión Mini-Printer Térmica (80mm / 58mm):** Impresión directa de tickets de compra para clientes sin revelar costos internos ni fórmulas de ensamble; selector de formato de ancho y prueba rápida.
+- **Corte X (Auditoría Parcial en Vivo):** Consulta ágil de acumulados de ventas y arqueo esperado a mitad de turno sin cerrar la caja chica ni alterar saldos.
+- **Candado de Turno Vencido:** Detección de turnos abiertos hace más de 18 horas; bloqueo preventivo que solicita asentar el corte del día anterior antes de iniciar una nueva jornada.
+- **Organización de Catálogo por Rotación de Ventas:** Opción en catálogo para ordenar por "Más Vendidos (Mayor Rotación)" con insignias dinámicas sin modificar la base de datos.
+- **Anulación Segura de Pedidos en Taller:** Cancelación controlada de órdenes erróneas que devuelve automáticamente flores e insumos reservados al inventario físico.
+
+---
+
+## [v2.3.0] — 2026-10-22
+### 🔄 Aislamiento Multi-Sucursal y Blindaje Zero-Trust
+
+- **Aislamiento Multi-Sucursal:** Filtrado inteligente en descarga para que cada terminal opere de forma privada con sus pedidos, cajas, compras e inventario físico.
+- **Cambio de Tienda Resiliente:** Detección automática al iniciar sesión con usuario de otra sucursal; subida de cambios pendientes, purga de datos locales y descarga limpia.
+- **Zero-Trust Proxy Gateway:** Eliminación de variables de entorno con credenciales expuestas en terminales cliente.
+
+---
+
 ## [v2.0.0] — 2026-10-07
 ### 🚀 Lanzamiento Mayor 2.0: Blindaje de Caja, Kiosko y Suite Visual
 
@@ -17,7 +50,7 @@ Todas las versiones notables de esta aplicación están documentadas en este arc
 
 #### 🛡️ Resiliencia y Correcciones
 - **Auto-Sanación de Recetas:** Reconciliación idempotente de catálogo canónico (34 insumos y 14 recetas BOM) para terminales secundarias con bases de datos locales preexistentes.
-- **Seguridad RBAC:** Matriz de permisos inviolable para los 4 roles de trabajo (`superadmin`, `cajero`, `florista`, `repartidor`), impidiendo fugas de información o manipulación de contraseñas de administradores.
+- **Seguridad RBAC:** Matriz de permisos inviolable para los roles de trabajo, impidiendo fugas de información o manipulación de contraseñas de administradores.
 - **Rescate de Contraseña en Login:** Flujo desacoplado e independiente que permite recuperar contraseñas sin requerir sesión iniciada previa.
 
 ---
@@ -25,7 +58,6 @@ Todas las versiones notables de esta aplicación están documentadas en este arc
 ## [v1.0.0] — 2026-09-15
 ### 📦 Versión Inicial: Arquitectura Local-First SQLite & FastAPI
 
-#### ✨ Características Fundacionales
 - Punto de Venta táctil para mostrador con cálculo de mano de obra y cobro en menos de 4 clics.
 - Catálogo y recetario de arreglos florales con explosión de materiales (BOM).
 - Tablero Kanban de pedidos y taller floral con 7 estados operativos en tiempo real.
