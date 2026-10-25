@@ -20,8 +20,8 @@
     "Preservación y protección blindada de las 5 categorías canónicas base.",
     "Jerarquía estricta RBAC: los administradores no pueden crear ni manipular superadministradores.",
     "Auditoría y edición completa de pedidos en taller con recálculo dinámico de saldos y anticipos.",
-    "Disponibilidad dinámica de recetas en POS ('Para armar: X') según tallos en almacén.",
-    "Modal de vista rápida botánica en punto de venta con clic derecho e ícono de ojo.",
+    "Disponibilidad dinámica de recetas en POS ('Disponibilidad: X ramos') según tallos en almacén.",
+    "Modal de vista rápida botánica en mostrador exclusivo para recetas y arreglos florales.",
     "Ordenamiento ergonómico de stock en POS (disponibles primero, agotados al final) y botón conmutador.",
     "Navegación lateral con secuencia numérica estricta F1 a F9 y panel ergonómico de acciones en catálogo.",
     "Sincronización de comprobantes e imágenes de proveedores vía Render Proxy."
