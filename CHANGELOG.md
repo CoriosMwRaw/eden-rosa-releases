@@ -5,12 +5,19 @@ Todas las versiones notables de esta aplicación están documentadas en este arc
 ---
 
 ## [v2.4.1] — 2026-10-24
-### 🛡️ Aislamiento de Categorías por Sucursal y Jerarquía Estricta en Roles de Usuario
+### 🛡️ Aislamiento Multi-Sucursal, Disponibilidad Dinámica en POS, Auditoría de Pedidos y Jerarquía RBAC
 
 #### ✨ Novedades y Mejoras
 - **Aislamiento de Categorías por Tienda:** Las categorías nuevas del catálogo e inventario ahora están estrictamente asociadas a su `sucursal_id`, impidiendo que categorías de pruebas o exclusivas de una sucursal se filtren al catálogo de otras tiendas físicas.
 - **Protección de Categorías Canónicas Base:** Las 5 categorías canónicas del sistema (Flores principales, Arreglos, Follajes, Materiales y Accesorios) quedan blindadas contra eliminación accidental y disponibles de forma oficial para toda la red de sucursales.
 - **Jerarquía Estricta en Registro de Empleados:** Un `administrador` de sucursal únicamente puede registrar o modificar roles de su nivel hacia abajo (`administrador`, `cajero`, `florista`, `repartidor`). Queda bloqueada a nivel visual en frontend y con código `403 Forbidden` en backend la asignación o manipulación de usuarios `superadmin`.
+- **Auditoría y Edición Completa de Pedidos en Taller:** Botones directos de edición, cancelación y documentos en la tabla de todos los pedidos, permitiendo modificar destinatarios, logística, fechas y montos con recálculo dinámico de saldo pendiente.
+- **Disponibilidad Dinámica de Recetas en Mostrador (POS):** Los arreglos calculan en tiempo real cuántas piezas pueden elaborarse (`Para armar: X`) según los tallos disponibles en almacén, permitiendo vender arreglos bajo demanda descontando primero vitrina y luego insumos botánicos.
+- **Modal de Vista Rápida Botánica en POS:** Previsualización instantánea de fotografía, precio, desglose de receta floral (BOM) e inventario con clic derecho o botón de ojo en cualquier tarjeta de producto.
+- **Ordenamiento por Stock y Filtro de Agotados en POS:** Los productos disponibles se muestran primero y los agotados al final, con un botón conmutador `[Ocultar Agotados]` para agilizar la venta.
+- **Secuencia Numérica Estricta F1 a F9:** Menú lateral completamente ordenado y ergonómico, reubicando Compras y Proveedores (`F9`) en su módulo administrativo natural.
+- **Panel de Acciones en Barra de Catálogo:** Separador visual y tarjeta contenedora para "Gestión" y "+ Nuevo Producto", evitando desalineaciones con filtros multilinea.
+- **Sincronización de Imágenes de Proveedores Vía Render Proxy:** Subida transparente de recibos y logotipos a Cloudinary desde cualquier estación de trabajo sin requerir llaves locales.
 - **Preservación Total de Datos Productivos:** Migraciones no destructivas (`ALTER TABLE ADD COLUMN IF NOT EXISTS`) que garantizan la integridad de existencias, órdenes y ventas del cliente.
 
 ---

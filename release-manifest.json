@@ -19,10 +19,11 @@
     "Aislamiento estricto de categorías de catálogo e inventario por sucursal física.",
     "Preservación y protección blindada de las 5 categorías canónicas base.",
     "Jerarquía estricta RBAC: los administradores no pueden crear ni manipular superadministradores.",
-    "Corte Z botánico detallado en PDF con consumo de flores, mermas e ingresos por forma de pago.",
-    "Corte X de arqueo parcial a mitad de jornada sin cerrar turno ni alterar saldos.",
-    "Soporte y configuración de mini-printer térmica de tickets para clientes (80mm / 58mm).",
-    "Organización de catálogo e insumos por Mayor Rotación de Ventas.",
-    "Anulación segura de pedidos en taller revirtiendo flores reservadas al stock."
+    "Auditoría y edición completa de pedidos en taller con recálculo dinámico de saldos y anticipos.",
+    "Disponibilidad dinámica de recetas en POS ('Para armar: X') según tallos en almacén.",
+    "Modal de vista rápida botánica en punto de venta con clic derecho e ícono de ojo.",
+    "Ordenamiento ergonómico de stock en POS (disponibles primero, agotados al final) y botón conmutador.",
+    "Navegación lateral con secuencia numérica estricta F1 a F9 y panel ergonómico de acciones en catálogo.",
+    "Sincronización de comprobantes e imágenes de proveedores vía Render Proxy."
   ]
 }
